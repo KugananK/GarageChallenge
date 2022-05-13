@@ -1,6 +1,7 @@
 package com.qa.main;
 
 public class Cars extends Vehicle {
+	
 	//Car specific attribute
 	private float topSpeed;
 
@@ -25,8 +26,6 @@ public class Cars extends Vehicle {
 	public void setTopSpeed(float topSpeed) {
 		this.topSpeed = topSpeed;
 	}
-	
-	
 	
 	
 }
