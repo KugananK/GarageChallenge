@@ -13,11 +13,14 @@ public class Garage {
 	public boolean removeVehicle(Vehicle vehicle) {
 		return Garage.remove(vehicle);
 	}
-	
-	public Vehicle getVehicle(Vehicle vehicle) {
-		return Garage.get(0);
+	public boolean getVehicle(int index) {
+		return Garage.get(index) != null;
 	}
-	public String fixVehicle() {
-		return Garage.get(0).fixVehicle();
+	public String fixVehicle(int index) {
+		return Garage.get(index).fixVehicle();
+	}
+	public String emptyGarage() {
+		Garage.clear();
+		return "Garage is empty";
 	}
 }
