@@ -1,7 +1,7 @@
 package com.qa.main;
 
 public class Cars extends Vehicle {
-	//Car specifc attribute
+	//Car specific attribute
 	private float topSpeed;
 
 	//Constructor
@@ -10,11 +10,23 @@ public class Cars extends Vehicle {
 		this.topSpeed = topSpeed;
 	}
 
+	//Abstract method
 	@Override
 	public String fixVehicle() {
 		// Need to do the fix vehicle code
 		return null;
 	}
+
+	//Getters and setters for car specific attribute
+	public float getTopSpeed() {
+		return topSpeed;
+	}
+
+	public void setTopSpeed(float topSpeed) {
+		this.topSpeed = topSpeed;
+	}
+	
+	
 	
 	
 }
