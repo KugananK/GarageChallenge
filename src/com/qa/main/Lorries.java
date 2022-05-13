@@ -13,8 +13,7 @@ public class Lorries extends Vehicle {
 
 	//Abstract method
 	@Override
-	public String fixVehicle() {
-		// TODO Auto-generated method stub
+	public int fixVehicle() {
 		int fixCost = 0;
 		// Need to do the fix vehicle code
 		if (getEngineType() == "V6") {
@@ -42,7 +41,7 @@ public class Lorries extends Vehicle {
 		} else {
 			System.out.println("That's a cute lorry");
 		}
-		return "Total cost to fix your lorry: " + fixCost;
+		return fixCost;
 	}
 
 	//Lorry specific getter and setter

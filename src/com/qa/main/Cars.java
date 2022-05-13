@@ -13,7 +13,7 @@ public class Cars extends Vehicle {
 
 	//Abstract method
 	@Override
-	public String fixVehicle() {
+	public int fixVehicle() {
 		int fixCost = 0;
 		// Need to do the fix vehicle code
 		if (getEngineType() == "V6") {
@@ -49,7 +49,7 @@ public class Cars extends Vehicle {
 			fixCost += 2000;
 			System.out.println("That's a fast car");
 		}
-		return "Total cost to fix your car: " + fixCost;
+		return fixCost;
 	}
 
 	//Getters and setters for car specific attribute

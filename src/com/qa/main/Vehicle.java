@@ -15,7 +15,7 @@ public abstract class Vehicle {
 	}
 	
 	//Abstract method
-	public abstract String fixVehicle();
+	public abstract int fixVehicle();
 	
 	//Getters and Setters
 	public String getEngineType() {

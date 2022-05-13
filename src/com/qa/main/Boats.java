@@ -13,7 +13,7 @@ public class Boats extends Vehicle {
 
 	//Abstract method
 	@Override
-	public String fixVehicle() {
+	public int fixVehicle() {
 		// TODO Auto-generated method stub
 		int fixCost = 0;
 		// Need to do the fix vehicle code
@@ -44,7 +44,7 @@ public class Boats extends Vehicle {
 			fixCost += 25000;
 			System.out.println("Nice boat");
 		}
-		return "Total cost to fix your boat: " + fixCost;
+		return fixCost;
 	}
 
 	//Boat specific getter and setter

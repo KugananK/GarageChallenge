@@ -13,7 +13,7 @@ public class Motorbikes extends Vehicle {
 
 	//abstract method
 	@Override
-	public String fixVehicle() {
+	public int fixVehicle() {
 		int fixCost = 0;
 		// Need to do the fix vehicle code
 		if (getEngineType() == "2 Stroke") {
@@ -49,7 +49,7 @@ public class Motorbikes extends Vehicle {
 			System.out.println("Nyeowww");
 			fixCost += 1000;
 		}
-		return "Total cost to fix your bike: " + fixCost;
+		return fixCost;
 	}
 
 	//Getters and setters for mBike
