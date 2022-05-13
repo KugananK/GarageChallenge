@@ -15,7 +15,32 @@ public class Boats extends Vehicle {
 	@Override
 	public String fixVehicle() {
 		// TODO Auto-generated method stub
-		return null;
+		int fixCost = 0;
+		// Need to do the fix vehicle code
+		if (getEngineType() == "Two Stroke") {
+			fixCost += 100000;
+		} else if (getEngineType() == "4 Stroke") {
+			fixCost += 200000;
+		} else { 
+			return "Talk to boat garage to get a quote";
+		}
+		if (getRange() == 0) {
+			System.out.println("Free as it's brand new");
+		} else if (getRange() > 0 && getRange() <= 999) {
+			fixCost += 50000;
+		} else if (getRange() >= 1000 && getRange() <=1999) {
+			fixCost += 100000;
+		}else if (getRange() >= 2000) {
+			fixCost += 150000;
+		} else {
+			return "How many miles?";
+		}
+		if (isCargoStorage() == true) {
+			fixCost += 15000;
+		} else {
+			System.out.println("What even is this");
+		}
+		return "Total cost to fix your boat: " + fixCost;
 	}
 
 	//Boat specific getter and setter

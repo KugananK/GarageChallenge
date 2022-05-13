@@ -14,11 +14,35 @@ public class Motorbikes extends Vehicle {
 	//abstract method
 	@Override
 	public String fixVehicle() {
-		// TODO Auto-generated method stub
-		return null;
+		int fixCost = 0;
+		// Need to do the fix vehicle code
+		if (getEngineType() == "2 Stroke") {
+			fixCost += 1000;
+		} else if (getEngineType() == "4 Stroke") {
+			fixCost += 1500;
+		} else { 
+			return "Talk to bike garage to get a quote";
+		}
+		if (getRange() == 0) {
+			System.out.println("Free as it's brand new");
+		} else if (getRange() > 0 && getRange() <= 24999) {
+			fixCost += 750;
+		} else if (getRange() >= 25000 && getRange() <=39999) {
+			fixCost += 1250;
+		}else if (getRange() >= 40000) {
+			fixCost += 1600;
+		} else {
+			return "How many miles?";
+		}
+		if (isCargoStorage() == true) {
+			fixCost += 100;
+		} else {
+			System.out.println("Where do you put your cargo?");
+		}
+		return "Total cost to fix your bike: " + fixCost;
 	}
 
-	//Getters and settes for mBike
+	//Getters and setters for mBike
 	public float getAcceleration() {
 		return acceleration;
 	}
