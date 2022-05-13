@@ -21,7 +21,7 @@ public class Motorbikes extends Vehicle {
 		} else if (getEngineType() == "4 Stroke") {
 			fixCost += 1500;
 		} else { 
-			return "Talk to bike garage to get a quote";
+			System.out.println("Talk to bike garage to get a quote");
 		}
 		if (getRange() == 0) {
 			System.out.println("Free as it's brand new");
@@ -32,12 +32,15 @@ public class Motorbikes extends Vehicle {
 		}else if (getRange() >= 40000) {
 			fixCost += 1600;
 		} else {
-			return "How many miles?";
+			System.out.println("How many miles?");
 		}
 		if (isCargoStorage() == true) {
 			fixCost += 100;
 		} else {
 			System.out.println("Where do you put your cargo?");
+		}
+		if (getAcceleration > 4.0f) {
+			System.out.println("needs more power baby");
 		}
 		return "Total cost to fix your bike: " + fixCost;
 	}

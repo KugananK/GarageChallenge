@@ -24,7 +24,7 @@ public class Lorries extends Vehicle {
 		} else if (getEngineType() == "V10") {
 			fixCost += 25000;
 		} else { 
-			return "Talk to lorry garage to get a quote";
+			System.out.println("Talk to lorry garage to get a quote");
 		}
 		if (getRange() == 0) {
 			System.out.println("Free as it's brand new");
@@ -35,7 +35,7 @@ public class Lorries extends Vehicle {
 		}else if (getRange() >= 1000000) {
 			fixCost += 150000;
 		} else {
-			return "How many miles?";
+			System.out.println("How many miles?");
 		}
 		if (isCargoStorage() == true) {
 			fixCost += 15000;

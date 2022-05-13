@@ -23,7 +23,7 @@ public class Cars extends Vehicle {
 		} else if (getEngineType() == "V10") {
 			fixCost += 7500;
 		} else { 
-			return "Talk to car garage to get a quote";
+			System.out.println("Talk to car garage to get a quote");
 		}
 		if (getRange() == 0) {
 			System.out.println("Free as it's brand new");
@@ -34,12 +34,20 @@ public class Cars extends Vehicle {
 		}else if (getRange() >= 100000) {
 			fixCost += 15000;
 		} else {
-			return "How many miles?";
+			System.out.println("How many miles?");
 		}
 		if (isCargoStorage() == true) {
 			fixCost += 500;
 		} else {
 			System.out.println("Where do you put your cargo?");
+		}
+		if (getTopSpeed() >= 100f && getTopSpeed() <=149.99f) {
+			fixCost += 250;
+		} else if (getTopSpeed() >= 150f && getTopSpeed() <=199.99f) {
+			fixCost+= 750;
+		} else {
+			fixCost += 2000;
+			System.out.println("That's a fast car");
 		}
 		return "Total cost to fix your car: " + fixCost;
 	}
