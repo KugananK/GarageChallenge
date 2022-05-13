@@ -39,8 +39,15 @@ public class Motorbikes extends Vehicle {
 		} else {
 			System.out.println("Where do you put your cargo?");
 		}
-		if (getAcceleration > 4.0f) {
-			System.out.println("needs more power baby");
+		if (getAcceleration() > 4.0f) {
+			System.out.println("Needs more power baby");
+		} else if (getAcceleration() <= 3.99f && getAcceleration() >= 3.0f) {
+			fixCost += 250;
+		} else if (getAcceleration() <= 2.99f && getAcceleration() >= 2.6f) {
+			fixCost += 600;
+		} else {
+			System.out.println("Nyeowww");
+			fixCost += 1000;
 		}
 		return "Total cost to fix your bike: " + fixCost;
 	}

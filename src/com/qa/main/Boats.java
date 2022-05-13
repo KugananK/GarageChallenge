@@ -22,7 +22,7 @@ public class Boats extends Vehicle {
 		} else if (getEngineType() == "4 Stroke") {
 			fixCost += 200000;
 		} else { 
-			return "Talk to boat garage to get a quote";
+			System.out.println("Talk to boat garage to get a quote");
 		}
 		if (getRange() == 0) {
 			System.out.println("Free as it's brand new");
@@ -33,12 +33,16 @@ public class Boats extends Vehicle {
 		}else if (getRange() >= 2000) {
 			fixCost += 150000;
 		} else {
-			return "How many miles?";
+			System.out.println("How many miles?");
 		}
 		if (isCargoStorage() == true) {
 			fixCost += 15000;
 		} else {
 			System.out.println("What even is this");
+		}
+		if (price > 500000) {
+			fixCost += 25000;
+			System.out.println("Nice boat");
 		}
 		return "Total cost to fix your boat: " + fixCost;
 	}
