@@ -6,25 +6,31 @@ import java.util.List;
 
 public class Garage {
 
-	public ArrayList<Vehicle> newGarage = new ArrayList();
+	public ArrayList<Vehicle> newGarage = new ArrayList<>();
 	
 	public boolean addVehicle(Vehicle vehicle) {
 		System.out.println("Added vehicle");
-		return newGarage.add(vehicle);
+		newGarage.add(vehicle);
+		return true;
 		}
 	
-	public boolean removeVehicle(Vehicle vehicle) {
+	public Vehicle removeVehicle(int index) {
 		System.out.println("Removed vehicle");
-		return newGarage.remove(vehicle);
+		return newGarage.remove(index);
 	}
-	public Vehicle getVehicle(int vehicle) {
+	public Vehicle getVehicle(int index) {
 		System.out.println("Got vehicle");
-		System.out.println(newGarage.get(vehicle));
-		return newGarage.get(vehicle);
+		System.out.println(newGarage.get(index));
+		return newGarage.get(index);
+		
 	}
-	public int fixVehicle(int vehicle) {
+	public int garageFixVehicle(int index) {
+		Vehicle vehicleToFix = getVehicle(index);
 		System.out.println("Fixed vehicle");
-		return newGarage.get(vehicle).fixVehicle();
+		return 	vehicleToFix.fixVehicle();
+	}
+	public ArrayList<Vehicle> getAllVehicles() {
+		return newGarage;
 	}
 	public String emptyGarage() {
 		newGarage.clear();
@@ -32,12 +38,6 @@ public class Garage {
 		return "Garage is empty";
 	}
 
-	//Need help with toString print
-	@Override
-	public String toString() {
-		return "Garage [newGarage=" + newGarage + ", getClass()=" + getClass() + ", hashCode()=" + hashCode()
-				+ ", toString()=" + super.toString() + "]";
-	}
 
 
 	

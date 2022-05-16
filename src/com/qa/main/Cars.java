@@ -60,6 +60,12 @@ public class Cars extends Vehicle {
 	public void setTopSpeed(float topSpeed) {
 		this.topSpeed = topSpeed;
 	}
+
+	@Override
+	public String toString() {
+		return "Cars [topSpeed=" + topSpeed + ", getEngineType()=" + getEngineType() + ", getRange()=" + getRange()
+				+ ", isCargoStorage()=" + isCargoStorage() + "]";
+	}
 	
 	
 }

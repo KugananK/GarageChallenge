@@ -41,5 +41,7 @@ public abstract class Vehicle {
 	public void setCargoStorage(boolean cargoStorage) {
 		this.cargoStorage = cargoStorage;
 	}
+
+	
 	
 }

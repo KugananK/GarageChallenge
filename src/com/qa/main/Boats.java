@@ -55,6 +55,12 @@ public class Boats extends Vehicle {
 	public void setPrice(float price) {
 		this.price = price;
 	}
+
+	@Override
+	public String toString() {
+		return "Boats [price=" + price + ", getEngineType()=" + getEngineType() + ", getRange()=" + getRange()
+				+ ", isCargoStorage()=" + isCargoStorage() + "]";
+	}
 	
 	
 

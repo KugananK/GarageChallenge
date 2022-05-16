@@ -60,6 +60,12 @@ public class Motorbikes extends Vehicle {
 	public void setAcceleration(float acceleration) {
 		this.acceleration = acceleration;
 	}
+
+	@Override
+	public String toString() {
+		return "Motorbikes [acceleration=" + acceleration + ", getEngineType()=" + getEngineType() + ", getRange()="
+				+ getRange() + ", isCargoStorage()=" + isCargoStorage() + "]";
+	}
 	
 	
 }

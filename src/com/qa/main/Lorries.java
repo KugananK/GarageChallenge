@@ -52,6 +52,12 @@ public class Lorries extends Vehicle {
 	public void setWeight(int weight) {
 		this.weight = weight;
 	}
+
+	@Override
+	public String toString() {
+		return "Lorries [Weight = " + weight + ", Engine Type = " + getEngineType() + ", Range = " + getRange()
+				+ ", Cargo Storage = " + isCargoStorage() + "]";
+	}
 	
 	
 

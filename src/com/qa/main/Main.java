@@ -26,10 +26,11 @@ public class Main {
 		
 		newGarage.getVehicle(2);
 		
-		newGarage.fixVehicle(3);
+		newGarage.garageFixVehicle(3);
+		System.out.println(newGarage.garageFixVehicle(3));
 		//Need help actually printing the value
 		
-		newGarage.removeVehicle(Lexus);
+		newGarage.removeVehicle(2);
 		
 		newGarage.emptyGarage();
 		
